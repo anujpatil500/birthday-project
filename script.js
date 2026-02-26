@@ -397,7 +397,10 @@ let draggedElement = null;
 const puzzleImages = [
     "images/1.jpg",
     "images/2.jpg",
-    "images/3.jpg"
+    "images/3.jpg",
+    "images/4.jpg",
+    "images/5.jpg",
+    "images/6.jpg"
 ];
 
 function initializePuzzleGame() {
@@ -713,6 +716,7 @@ function updateMessage(days, hours, minutes, seconds) {
 
 
 document.addEventListener("DOMContentLoaded", initializeCountdown);
+
 
 
 
