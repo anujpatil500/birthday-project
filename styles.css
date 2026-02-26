@@ -719,7 +719,6 @@ body {
 
 /* Puzzle Pieces */
 .puzzle-piece {
-    background-size: cover;
     border: 2px solid #fff;
     border-radius: 4px;
     cursor: grab;
@@ -1120,3 +1119,4 @@ select:focus,
 .fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
 }
+
