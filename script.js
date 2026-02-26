@@ -397,10 +397,7 @@ let draggedElement = null;
 const puzzleImages = [
     "image/1.jpg",
     "image/2.jpg",
-    "image/3.jpg",
-    "image/4.jpg",
-    "image/5.jpg",
-    "image/6.jpg"
+    "image/3.jpg"
 ];
 
 function initializePuzzleGame() {
@@ -465,10 +462,10 @@ function generatePuzzle() {
         const row = Math.floor(i / gridSize);
         const col = i % gridSize;
 
-        piece.style.backgroundImage = `url(${imageUrl})`;
-        piece.style.backgroundSize = `${gridSize * 100}%`;
-        piece.style.backgroundPosition =
-            `${(col/(gridSize-1))*100}% ${(row/(gridSize-1))*100}%`;
+       piece.style.backgroundImage = `url(${imageUrl})`;
+piece.style.backgroundSize = `${gridSize * 100}% ${gridSize * 100}%`;
+piece.style.backgroundPosition =
+    `${col * (100 / (gridSize - 1))}% ${row * (100 / (gridSize - 1))}%`;
 
         piece.draggable = true;
 
@@ -717,5 +714,6 @@ function updateMessage(days, hours, minutes, seconds) {
 
 
 document.addEventListener("DOMContentLoaded", initializeCountdown);
+
 
 
