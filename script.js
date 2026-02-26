@@ -462,11 +462,10 @@ function generatePuzzle() {
         const row = Math.floor(i / gridSize);
         const col = i % gridSize;
 
-       piece.style.backgroundImage = `url(${imageUrl})`;
-piece.style.backgroundSize = `${gridSize * 100}% ${gridSize * 100}%`;
-piece.style.backgroundPosition =
-    `${col * (100 / (gridSize - 1))}% ${row * (100 / (gridSize - 1))}%`;
-
+        piece.style.backgroundImage = `url(${imageUrl})`;
+        piece.style.backgroundSize = `${gridSize * 100}%`;
+        piece.style.backgroundPosition =
+        `${(col/(gridSize-1))*100}% ${(row/(gridSize-1))*100}%`;
         piece.draggable = true;
 
         piece.addEventListener("dragstart", handleDragStart);
@@ -714,6 +713,7 @@ function updateMessage(days, hours, minutes, seconds) {
 
 
 document.addEventListener("DOMContentLoaded", initializeCountdown);
+
 
 
 
