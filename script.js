@@ -395,8 +395,12 @@ let draggedElement = null;
 
 // Puzzle Images
 const puzzleImages = [
-    "https://i.pinimg.com/736x/fd/56/7d/fd567de6a4719347898923a9abeacd1a.jpg",
-    "https://i.pinimg.com/736x/8f/3d/78/8f3d78e9f0cba1f3e0948c0c3e73e949.jpg"
+    "image/1.jpg",
+    "image/2.jpg",
+    "image/3.jpg",
+    "image/4.jpg",
+    "image/5.jpg",
+    "image/6.jpg"
 ];
 
 function initializePuzzleGame() {
@@ -713,4 +717,5 @@ function updateMessage(days, hours, minutes, seconds) {
 
 
 document.addEventListener("DOMContentLoaded", initializeCountdown);
+
 
