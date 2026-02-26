@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Happy Birthday jyoti 💕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+       <link rel="icon" href="logo.jpg" type="image/jpg">
+</head>
+
+<body>
+    <!-- Floating Background Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="typewriter" id="typewriter">Happy Birthday, Beautiful! 💕</h1>
+            <p class="subtitle fade-in">Let's Celebrate Your Special Day!</p>
+            <div class="cake-container" onclick="blowCandles()">
+                🎂
+            </div>
+            <button class="cta-button" onclick="scrollToSection('gallery')">
+                Start the Celebration 🎉
+            </button>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Beautiful Memories</h2>
+            <div class="gallery-grid">
+                <div class="photo-card" data-aos="fade-up" data-delay="100">
+                    <div class="photo-container">
+                        <img src="https://i.pinimg.com/736x/cb/ac/c7/cbacc72f13585614f992470eb1b809bd.jpg"
+                            alt="Beautiful moment">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Every moment with you is magical</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-card" data-aos="fade-up" data-delay="200">
+                    <div class="photo-container">
+                        <img src="https://i.pinimg.com/736x/28/c1/df/28c1df523fb64b7374587ab73235369e.jpg"
+                            alt="Sweet memory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Your smile lights up my world</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-card" data-aos="fade-up" data-delay="300">
+                    <div class="photo-container">
+                        <img src="https://i.pinimg.com/736x/07/df/62/07df628436c7c7cdb48686c94deccd7c.jpg"
+                            alt="Happy times">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Adventures together</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-card" data-aos="fade-up" data-delay="400">
+                    <div class="photo-container">
+                        <img src="https://i.pinimg.com/736x/f9/39/91/f93991159da20a133d9f50dded746b5c.jpg"
+                            alt="Love moment">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">My heart belongs to you</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-card" data-aos="fade-up" data-delay="500">
+                    <div class="photo-container">
+                        <img src="https://i.pinimg.com/736x/c9/f3/99/c9f3992671ef43cf502fe869dd663c42.jpg"
+                            alt="Beautiful day">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Creating memories together</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-card" data-aos="fade-up" data-delay="600">
+                    <div class="photo-container">
+                        <img src="https://i.pinimg.com/736x/2b/f6/57/2bf6577a11fbc6dd8adeaf99be4f51b8.jpg"
+                            alt="Romantic moment">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Forever and always</div>
+                            <button class="like-btn" onclick="toggleLike(this)">
+                                <span class="heart-icon">🤍</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Birthday Message Section -->
+    <section class="message-section" id="message">
+        <div class="container">
+            <div class="message-card">
+                <h2 class="message-title">A Special Message for You</h2>
+                <div class="message-content">
+                    <p class="message-text fade-in-text">
+                        On this special day, I want you to know how grateful I am to have you in my life.
+                        Your laughter fills my days with joy, your love gives me strength, and your presence
+                        makes everything better. You are not just my girlfriend, you are my best friend,
+                        my partner in crime, and the love of my life.
+                    </p>
+                    <p class="message-text fade-in-text">
+                        Today, we celebrate you – your kindness, your beauty, your amazing spirit, and
+                        all the wonderful things that make you uniquely you. I hope this new year of your
+                        life brings you endless happiness, incredible adventures, and all your dreams come true.
+                    </p>
+                    <p class="message-signature fade-in-text">
+                        Happy Birthday, my love! Here's to many more years of laughter, love, and beautiful memories
+                        together. 💕
+                    </p>
+                </div>
+                <div class="message-hearts">
+                    <span class="heart-animation">💖</span>
+                    <span class="heart-animation">💕</span>
+                    <span class="heart-animation">💗</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Music Section -->
+<section id="music" class="music-section">
+    <div class="container">
+        <h2 class="section-title">🎵 Birthday Playlist</h2>
+
+        <div class="music-player">
+            <div class="player-display">
+                <div class="album-art">
+                    <div class="vinyl-record" id="vinylRecord">
+                        <div class="vinyl-center"></div>
+                    </div>
+                </div>
+
+                <div class="track-info">
+                    <h3 id="trackTitle"> Raabta </h3>
+                    <p id="trackArtist">Birthday Collection</p>
+
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress" id="progress"></div>
+                        </div>
+                        <div class="time-display">
+                            <span id="currentTime">0:00</span>
+                            <span id="duration">3:52</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="player-controls">
+                <button class="control-btn" id="prevTrackBtn">⏮️</button>
+                <button class="control-btn play-pause-btn" id="playPauseBtn">▶️</button>
+                <button class="control-btn" id="nextTrackBtn">⏭️</button>
+            </div>
+
+            <div class="volume-control">
+                <span>🔊</span>
+                <input type="range" id="volumeSlider" min="0" max="100" value="50">
+            </div>
+
+            <div class="playlist">
+                <h4>🎶 Playlist</h4>
+
+                <div class="playlist-item active" data-track="0">
+                    <span>1. Raabta (Kehte hain khuda)</span>
+                    <span>3:52</span>
+                </div>
+
+                <div class="playlist-item" data-track="1">
+                    <span>2. Khairiyat Pucho kabhi to kaifiyat</span>
+                    <span>3:58</span>
+                </div>
+
+                <div class="playlist-item" data-track="2">
+                    <span>3. Tere Sang Ishq Hua</span>
+                    <span>3:48</span>
+                </div>
+            </div>
+
+            <audio id="audioPlayer" preload="metadata">
+                <source src="" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+</section>
+
+
+<!-- Puzzle Game Section -->
+    <section id="game" class="game-section">
+        <div class="container">
+            <h2 class="section-title">🧩 Birthday Puzzle Challenge</h2>
+            <div class="game-controls">
+                <div class="difficulty-selector">
+                    <label>Difficulty:</label>
+                    <select id="difficultySelect">
+                        <option value="easy">Easy (3x3)</option>
+                        <option value="medium">Medium (4x4)</option>
+                        <option value="hard">Hard (5x5)</option>
+                    </select>
+                </div>
+                <div class="game-stats">
+                    <div class="stat">
+                        <span>Time:</span>
+                        <span id="gameTimer">00:00</span>
+                    </div>
+                    <div class="stat">
+                        <span>Moves:</span>
+                        <span id="moveCounter">0</span>
+                    </div>
+                </div>
+                <button class="game-btn" id="newGameBtn">New Game</button>
+                <button class="game-btn" id="showSolutionBtn">Show Solution</button>
+            </div>
+
+            <div class="puzzle-container">
+                <div class="puzzle-board" id="puzzleBoard">
+                    <!-- Puzzle pieces will be generated here -->
+                </div>
+                <div class="solution-preview" id="solutionPreview">
+                    <h4>Solution Preview:</h4>
+                    <img src="" alt="Solution" id="solutionImage">
+                </div>
+            </div>
+
+            <div class="game-completion" id="gameCompletion" style="display: none;">
+                <div class="completion-message">
+                    <h3>🎉 Congratulations! 🎉</h3>
+                    <p>You solved the puzzle!</p>
+                    <p>Time: <span id="finalTime"></span></p>
+                    <p>Moves: <span id="finalMoves"></span></p>
+                    <button class="game-btn" id="playAgainBtn">Play Again</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section id="countdown" class="countdown-section">
+        <div class="container">
+            <h2 class="section-title">⏰ Birthday Countdown</h2>
+            <div class="countdown-container">
+                <div class="countdown-input">
+                    <label for="birthdayDate">Set Your Birthday Date:</label>
+                    <input type="datetime-local" id="birthdayDate">
+                </div>
+                
+                <div class="countdown-display" id="countdownDisplay">
+                    <div class="time-unit">
+                        <span class="time-number" id="days">00</span>
+                        <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="hours">00</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="minutes">00</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="seconds">00</span>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                </div>
+
+                <div class="countdown-message" id="countdownMessage">
+                    <p>Set your birthday date to start the countdown!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#gallery">Gallery</a>
+                <a href="#music">Music</a>
+                <a href="#game">Game</a>
+                <a href="#countdown">Countdown</a>
+            </div>
+            <p>&copy; 2026 Birthday Celebration Website. Made with ❤️ for special moments!</p>
+            
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
