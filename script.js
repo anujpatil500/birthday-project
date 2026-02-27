@@ -421,15 +421,8 @@ function initializePuzzleGame() {
 function changeDifficulty() {
     const select = document.getElementById("difficultySelect");
     currentDifficulty = select.value;
-
-    const gridSize =
-        currentDifficulty === "easy" ? 3 :
-        currentDifficulty === "medium" ? 4 : 5;
-
-    const puzzleBoard = document.getElementById("puzzleBoard");
-    puzzleBoard.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+    startNewGame();   // 🔥 important
 }
-
 function startNewGame() {
     clearInterval(gameTimer);
     moveCount = 0;
@@ -445,6 +438,8 @@ function startNewGame() {
 
 function generatePuzzle() {
     const puzzleBoard = document.getElementById("puzzleBoard");
+
+    // Clear board completely
     puzzleBoard.innerHTML = "";
     puzzlePieces = [];
 
@@ -452,6 +447,8 @@ function generatePuzzle() {
         currentDifficulty === "easy" ? 3 :
         currentDifficulty === "medium" ? 4 : 5;
 
+    // 🔥 Always reset grid properly
+    puzzleBoard.style.display = "grid";
     puzzleBoard.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
 
     const totalPieces = gridSize * gridSize;
@@ -463,13 +460,14 @@ function generatePuzzle() {
     img.src = imageUrl;
 
     img.onload = function () {
-        // ✅ Auto adjust board ratio
         puzzleBoard.style.aspectRatio = `${img.naturalWidth} / ${img.naturalHeight}`;
     };
 
     for (let i = 0; i < totalPieces; i++) {
+
         const piece = document.createElement("div");
         piece.className = "puzzle-piece";
+
         piece.dataset.correctPosition = i;
 
         const row = Math.floor(i / gridSize);
@@ -478,7 +476,7 @@ function generatePuzzle() {
         piece.style.backgroundImage = `url(${imageUrl})`;
         piece.style.backgroundSize = `${gridSize * 100}% ${gridSize * 100}%`;
         piece.style.backgroundPosition =
-            `${(col / (gridSize - 1)) * 100}% ${(row / (gridSize - 1)) * 100}%`;
+            `${(col * 100) / (gridSize - 1)}% ${(row * 100) / (gridSize - 1)}%`;
 
         piece.draggable = true;
 
@@ -491,7 +489,6 @@ function generatePuzzle() {
         puzzlePieces.push(piece);
     }
 }
-
 function shufflePuzzle() {
     const puzzleBoard = document.getElementById("puzzleBoard");
 
@@ -727,6 +724,7 @@ function updateMessage(days, hours, minutes, seconds) {
 
 
 document.addEventListener("DOMContentLoaded", initializeCountdown);
+
 
 
 
