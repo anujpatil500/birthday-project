@@ -707,13 +707,12 @@ body {
 
 /* Board */
 .puzzle-board {
+    width: min(90vw, 420px);
     display: grid;
     gap: 3px;
     background: #ddd;
     padding: 10px;
     border-radius: 10px;
-    width: 320px;
-    height: 320px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
@@ -1119,4 +1118,5 @@ select:focus,
 .fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
 }
+
 
