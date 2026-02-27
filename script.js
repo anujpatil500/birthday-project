@@ -132,17 +132,6 @@ function createFloatingHeart(button) {
         document.body.removeChild(heart);
     };
 }
-
-// Add parallax effect to hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    const parallaxSpeed = 0.5;
-
-    if (hero) {
-        hero.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
-    }
-
     // Update particles position based on scroll
     const particles = document.querySelectorAll('.particle');
     particles.forEach((particle, index) => {
@@ -724,6 +713,7 @@ function updateMessage(days, hours, minutes, seconds) {
 
 
 document.addEventListener("DOMContentLoaded", initializeCountdown);
+
 
 
 
