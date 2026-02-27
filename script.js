@@ -451,10 +451,6 @@ function generatePuzzle() {
     const img = new Image();
     img.src = imageUrl;
 
-    img.onload = function () {
-        puzzleBoard.style.aspectRatio = `${img.naturalWidth} / ${img.naturalHeight}`;
-    };
-
     for (let i = 0; i < totalPieces; i++) {
 
         const piece = document.createElement("div");
@@ -716,6 +712,7 @@ function updateMessage(days, hours, minutes, seconds) {
 
 
 document.addEventListener("DOMContentLoaded", initializeCountdown);
+
 
 
 
