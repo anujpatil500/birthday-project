@@ -132,7 +132,10 @@ function createFloatingHeart(button) {
         document.body.removeChild(heart);
     };
 }
-    // Update particles position based on scroll
+   // Update particles position based on scroll
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+
     const particles = document.querySelectorAll('.particle');
     particles.forEach((particle, index) => {
         const speed = 0.2 + (index % 3) * 0.1;
@@ -713,6 +716,7 @@ function updateMessage(days, hours, minutes, seconds) {
 
 
 document.addEventListener("DOMContentLoaded", initializeCountdown);
+
 
 
 
