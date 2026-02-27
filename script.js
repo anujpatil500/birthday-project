@@ -452,10 +452,20 @@ function generatePuzzle() {
         currentDifficulty === "easy" ? 3 :
         currentDifficulty === "medium" ? 4 : 5;
 
+    puzzleBoard.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+
     const totalPieces = gridSize * gridSize;
     const imageUrl = puzzleImages[Math.floor(Math.random() * puzzleImages.length)];
 
     document.getElementById("solutionImage").src = imageUrl;
+
+    const img = new Image();
+    img.src = imageUrl;
+
+    img.onload = function () {
+        // ✅ Auto adjust board ratio
+        puzzleBoard.style.aspectRatio = `${img.naturalWidth} / ${img.naturalHeight}`;
+    };
 
     for (let i = 0; i < totalPieces; i++) {
         const piece = document.createElement("div");
@@ -466,9 +476,10 @@ function generatePuzzle() {
         const col = i % gridSize;
 
         piece.style.backgroundImage = `url(${imageUrl})`;
-        piece.style.backgroundSize = `${gridSize * 100}%`;
+        piece.style.backgroundSize = `${gridSize * 100}% ${gridSize * 100}%`;
         piece.style.backgroundPosition =
-        `${(col/(gridSize-1))*100}% ${(row/(gridSize-1))*100}%`;
+            `${(col / (gridSize - 1)) * 100}% ${(row / (gridSize - 1)) * 100}%`;
+
         piece.draggable = true;
 
         piece.addEventListener("dragstart", handleDragStart);
@@ -716,6 +727,7 @@ function updateMessage(days, hours, minutes, seconds) {
 
 
 document.addEventListener("DOMContentLoaded", initializeCountdown);
+
 
 
 
